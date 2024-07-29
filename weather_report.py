@@ -13,13 +13,14 @@ openId = os.environ.get("OPEN_ID")
 weather_template_id = os.environ.get("TEMPLATE_ID")
 
 def get_weather(my_city):
-    urls = ["http://www.weather.com.cn/textFC/hb.shtml",
-            "http://www.weather.com.cn/textFC/db.shtml",
-            "http://www.weather.com.cn/textFC/hd.shtml",
-            "http://www.weather.com.cn/textFC/hz.shtml",
-            "http://www.weather.com.cn/textFC/hn.shtml",
-            "http://www.weather.com.cn/textFC/xb.shtml",
-            "http://www.weather.com.cn/textFC/xn.shtml"
+    urls = [
+        #"http://www.weather.com.cn/textFC/hb.shtml",
+           # "http://www.weather.com.cn/textFC/db.shtml",
+            "http://www.weather.com.cn/textFC/hd.shtml"
+            #"http://www.weather.com.cn/textFC/hz.shtml",
+           # "http://www.weather.com.cn/textFC/hn.shtml",
+           # "http://www.weather.com.cn/textFC/xb.shtml",
+           # "http://www.weather.com.cn/textFC/xn.shtml"
             ]
     for url in urls:
         resp = requests.get(url)
@@ -130,4 +131,4 @@ def weather_report(this_city):
 
 
 if __name__ == '__main__':
-    weather_report("淄博")
+    weather_report("宝山")
